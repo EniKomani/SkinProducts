@@ -1,10 +1,12 @@
+/*Home-------------------------*/
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 /*navbar*/
 nav {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     overflow: hidden;
     background-color: beige;
@@ -47,74 +49,13 @@ nav a:hover{
     padding: 30px;
 }
 
-/*login --------------------------------------*/
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.container {
-    display: flex; /* Aktivizon Flexbox për këtë kontejner */
-    justify-content: center; /* Qendërzim horizontal */
-    align-items: center; /* Qendërzim vertikal */
-    height: 80vh; /* Lartësia e ekranit */
-    position: relative; /* Lejon pozicionimin korrekt të kutisë */
-    background-color: rgba(0, 0, 0, 0.05); /* Opsionale: sfond i lehtë për këtë zonë */
-  
-}
-
-
-
-.form-box {
-    width: 400px; /* Gjerësia e katrorit */
-    height: 350px;
-    padding: 20px; /* Hapësirë brenda kutisë */
-    border: 2px solid #ccc; /* Kufiri i kutisë */
-    border-radius: 10px; /* Skaje të rrumbullakosura */
-    background:transparent; /* Sfond i bardhë */
-    box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2); /* Hije për efekt 3D */
-    z-index: 10;
-    
-  
-}
-form input {
-    width: 100%; /* Mbush gjerësinë e plotë të kutisë */
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    outline: none;
-    
-
-}
-
-
-/* Stilimi për butonin submit */
-button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color:rgb(213, 169, 115);
-    color:black;
-    font-size: 16px;
-    cursor: pointer;
-    
-}
-
-button:hover {
-    background-color:white;
-}
-
-p {
-    font-size: 16px; /* Opsionale, për madhësinë e tekstit */
-}
-
-a {
-    margin-left: 20px; /* Krijon hapësirë midis tekstit dhe lidhjes */
+#nje{
+    background-image: url("home.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 650px;
+    background-position: center;
+    height: 650px;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
 }
