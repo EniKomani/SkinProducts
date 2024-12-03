@@ -93,3 +93,21 @@ nav a:hover{
     padding-left: 50px;
     padding-top: 200px;
 }
+
+.column1 {
+    float: left;
+    width: 20.33%;
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+}
+
+.row1 {
+    display:flex;
+    justify-content: space-between;
+    gap:5px; 
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 200px;
+}
