@@ -61,9 +61,16 @@ nav a:hover{
     width: 100vw;
     max-width: 100%;
     overflow: hidden;
+
+
 }
 
 /*fotot e para ---------------------*/
+.text{
+    margin-left: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 50px;
+}
 
 .column {
     float: left;
@@ -91,7 +98,8 @@ nav a:hover{
     gap:5px; 
     padding-right: 50px;
     padding-left: 50px;
-    padding-top: 200px;
+    padding-top: 50px;
+
 }
 
 .column1 {
@@ -111,3 +119,33 @@ nav a:hover{
     padding-left: 50px;
     padding-top: 200px;
 }
+/*contact us ------------*/
+.container1 {
+    padding: 20px;
+    background-color:rgb(239, 221, 221);
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.container1 input, .container1 select, .container1 textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container1 input[type="submit"] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container1 input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
