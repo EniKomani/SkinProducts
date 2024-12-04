@@ -120,32 +120,63 @@ nav a:hover{
     padding-top: 200px;
 }
 /*contact us ------------*/
+
 .container1 {
     padding: 20px;
-    background-color:rgb(239, 221, 221);
-    border-radius: 5px;
+    background-color:transparent; /* Transparent background */
+    border-radius: 10px;
     max-width: 600px;
     margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adding subtle shadow */
+    backdrop-filter: blur(10px); /* Blur effect behind the form */
 }
 
+/* Input, select, and textarea */
 .container1 input, .container1 select, .container1 textarea {
     width: 100%;
     padding: 12px;
-    margin-top: 6px;
+    margin-top: 10px;
+    margin-bottom: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px; /* Rounded corners for inputs */
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
+    transition: all 0.3s ease; /* Smooth transition for focus */
 }
 
+/* Focus effect */
+.container1 input:focus, .container1 select:focus, .container1 textarea:focus {
+    outline: none;
+    border: 1px solid #04AA6D;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 10px rgba(0, 170, 109, 0.5); /* Add glow effect on focus */
+}
+
+/* Label styling */
+.container1 label {
+    font-size: 18px;
+    font-weight: bold;
+    color:black;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Submit button */
 .container1 input[type="submit"] {
-    background-color: #04AA6D;
+    background-color:brown;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
-.container1 input[type="submit"]:hover {
-    background-color: #45a049;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container1 {
+        width: 90%;
+    }
 }
 

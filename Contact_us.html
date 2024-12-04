@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+         body{
+            background-image: url("foto1..jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -18,20 +25,18 @@
         <button class="login_btn"><a href="loginform.html">Log In</a></button>
     </nav>
     <div class="container1">
-        <form>
+        <form action="#"method="post">
         <label for="firstname">First Name</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Your name...">
+        <input type="text" id="firstname" name="firstname" placeholder="Your name..." required>
 
         <label for="Lastname">Last Name</label>
-        <input type="text" id="lname" name="Lastname" placeholder="Your last name...">
+        <input type="text" id="lname" name="Lastname" placeholder="Your last name..."required>
 
-        <label for="country">Country</label>
-        <select id="country" name="country">
-            <option value="Gjakove">Gjakova</option>
-            <option value="Peje">Peje</option>
-            <option value="Ferizaj">Ferizaj</option>
+        <label for="Email">Email</label>
+        <input type="Email" id="email" name="Email"placeholder="write something..." required>
+           
 
-        </select>
+        
         <label for="message">Message</label>
         <textarea id="subject" name="subject" placeholder="Write something..."></textarea>
 
