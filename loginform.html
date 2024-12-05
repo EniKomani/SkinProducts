@@ -14,6 +14,7 @@
     </style>
 </head>
     <body>
+        
 
        <div  class="container">
             <div class="form-box">
@@ -33,11 +34,36 @@
                 <br>
                 
                 <p >Don't have an account?<a href="Sign up.html"> Sign up</a></p>
+                <p id="problemet"></p>
 
             </div>
-        
-       
         </div>    
-    
+       
     </body>
+
+    <script>
+
+        let password = document.getElementById("password").value;
+        let problemet = document.getElementById("problemet");
+        let errors=[];
+
+        if(!/[A-z]/.test(password)){
+            errors.push("Password duhet te kete nje shkronje te madhe");
+        }
+        if(!/[a-z]/.test(password)){
+            errors.push("Password duhet te kete nje shkronje te vogel");
+        }
+        if(!/[!@#$%^&*()_-+=<>/?]/.test(password)){
+            errors.push("Password duhet te kete te pakten nje simbol");
+        }
+        if(!/[1234567890]/.test(password)){
+            errors.push("Password duhet te kete te pakten nje numer");
+        }
+        if(password.length<9){
+            errors.push("Password duhet te kete te pakten 9-te karaktere");
+        }
+        
+
+
+    </script>
 </html>
