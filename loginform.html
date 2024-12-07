@@ -2,68 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
     <link rel="stylesheet" href="style1.css">
     <style>
-        body{
+        body {
             background-image: url("foto1..jpg");
             background-repeat: no-repeat;
             background-size: cover;
         }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
     </style>
+    <script src="validation.js" defer></script> <!-- Skedari i validimit -->
 </head>
-    <body>
-        
-
-       <div  class="container">
-            <div class="form-box">
-                
-                <form>
-                    
-            
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                
-                    <br>
-                    <label for ="Password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your Password"required>
-                    
-                    <button type="submit">Login</button>
-                </form>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form id="loginForm"> <!-- ID e shtuar për lidhjen me JS -->
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <span class="error" id="usernameError"></span>
                 <br>
-                
-                <p >Don't have an account?<a href="Sign up.html"> Sign up</a></p>
-                <p id="problemet"></p>
-
-            </div>
-        </div>    
-       
-    </body>
-
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+                <span class="error" id="passwordError"></span>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <br>
+            <p>Don't have an account?<a href="Sign up.html"> Sign up</a></p>
+        </div>
+    </div> 
+    
     <script>
-
-        let password = document.getElementById("password").value;
-        let problemet = document.getElementById("problemet");
-        let errors=[];
-
-        if(!/[A-z]/.test(password)){
-            errors.push("Password duhet te kete nje shkronje te madhe");
-        }
-        if(!/[a-z]/.test(password)){
-            errors.push("Password duhet te kete nje shkronje te vogel");
-        }
-        if(!/[!@#$%^&*()_-+=<>/?]/.test(password)){
-            errors.push("Password duhet te kete te pakten nje simbol");
-        }
-        if(!/[1234567890]/.test(password)){
-            errors.push("Password duhet te kete te pakten nje numer");
-        }
-        if(password.length<9){
-            errors.push("Password duhet te kete te pakten 9-te karaktere");
-        }
         
-
-
     </script>
+</body>
 </html>
