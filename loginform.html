@@ -5,31 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
     <link rel="stylesheet" href="style1.css">
-    <style>
-        body {
-            background-image: url("foto1..jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .error {
-            color: red;
-            font-size: 14px;
-        }
-    </style>
-    <script src="validation.js" defer></script> <!-- Skedari i validimit -->
+    
+   
 </head>
 <body>
     <div class="container">
         <div class="form-box">
-            <form id="loginForm"> <!-- ID e shtuar për lidhjen me JS -->
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                <span class="error" id="usernameError"></span>
-                <br>
+            <form id="loginForm">
+                <p id="vendos"></p> 
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+               
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your Password" required>
-                <span class="error" id="passwordError"></span>
-                <br>
+                <input type="password" id="password" name="password" placeholder="Enter your Password">
+               
                 <button type="submit">Login</button>
             </form>
             <br>
@@ -38,7 +27,28 @@
     </div> 
     
     <script>
-        
+        const emailt=document.getElementById("email");
+        const passwordform = document.getElementById("loginForm");
+        const passwordInput = document.getElementById("password");
+
+        passwordform.addEventListener('submit', (ndalo)=>{
+
+            const vendoset = document.getElementById("vendos");
+            let gabime = "";
+            
+            if(passwordInput.value.length===0){
+                gabime += "Please fill the password.";
+            }
+            if(emailt.value.length===0){
+                gabime+=("Please fill the email")
+            }
+            if(gabime){
+                vendoset.innerText=gabime;
+                ndalo.preventDefault();
+            }
+        })
+
+
     </script>
 </body>
 </html>
