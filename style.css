@@ -154,13 +154,6 @@ nav a:hover{
     transition: all 0.3s ease; /* Smooth transition for focus */
 }
 
-/* Focus effect */
-.container1 input:focus, .container1 select:focus, .container1 textarea:focus {
-    outline: none;
-    border: 1px solid #04AA6D;
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 10px rgba(0, 170, 109, 0.5); /* Add glow effect on focus */
-}
 
 /* Label styling */
 .container1 label {
