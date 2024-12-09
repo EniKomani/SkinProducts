@@ -2,6 +2,8 @@
 
 body {
     margin: 0;
+    padding: 0;
+    height: 100vh;
     font-family: Arial, sans-serif; 
     background-color: beige;   
 }
@@ -50,6 +52,7 @@ nav a:hover{
 
 .login_btn a{
     padding: 30px;
+
 }
 
 #nje{
@@ -61,8 +64,6 @@ nav a:hover{
     width: 100vw;
     max-width: 100%;
     overflow: hidden;
-
-
 }
 
 /*fotot e para ---------------------*/
@@ -70,8 +71,8 @@ nav a:hover{
     margin-left: 50px;
     font-family: 'Times New Roman', Times, serif;
     margin-top: 90px;
-    font-family: Comic Sans MS ;
-    font-weight:normal;
+    font-family: Comic Sans MS;
+    font-weight: normal;
 }
 
 .column {
@@ -101,7 +102,6 @@ nav a:hover{
     padding-right: 50px;
     padding-left: 50px;
     padding-top: 60px;
-    
 
 }
 
@@ -109,6 +109,7 @@ nav a:hover{
     float: left;
     width: 20.33%;
     padding: 0px;
+    
     flex: 1;
     display: flex;
     justify-content: center; 
@@ -125,10 +126,8 @@ nav a:hover{
 }
 
 .column1 img{
-    height:500px;
-   
+    height: 500px;
 }
-
 /*contact us ------------*/
 
 .container1 {
@@ -140,6 +139,7 @@ nav a:hover{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adding subtle shadow */
     backdrop-filter: blur(10px); /* Blur effect behind the form */
 }
+
 
 /* Input, select, and textarea */
 .container1 input, .container1 select, .container1 textarea {
@@ -154,6 +154,13 @@ nav a:hover{
     transition: all 0.3s ease; /* Smooth transition for focus */
 }
 
+/* Focus effect */
+.container1 input:focus, .container1 select:focus, .container1 textarea:focus {
+    outline: none;
+    border: 1px solid #04AA6D;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 10px rgba(0, 170, 109, 0.5); /* Add glow effect on focus */
+}
 
 /* Label styling */
 .container1 label {
@@ -182,4 +189,5 @@ nav a:hover{
         width: 90%;
     }
 }
+
 
