@@ -251,11 +251,15 @@ nav a:hover{
     position: absolute;
     top: 0;
   }
-  
 
-  
- 
-  .fade {
+
+    .qmimi{
+        margin-bottom: 10px;
+        font-size:1.2em;
+        color:#333;
+    }
+        
+          .fade {
     animation-name: fade;
     animation-duration: 1.5s;
   }
@@ -264,5 +268,33 @@ nav a:hover{
     from {opacity: .4}
     to {opacity: 1}
   }
+  /*produkti*/
+  
+  .columnflex {
+    width: 20.33%;
+    padding: 30px;
+    flex: 1;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+}
 
+.columnflex img{
+    height:300px;
+   
+}
+.rowflex::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
+  .rowflex {
+    display:flex;
+    justify-content: center;
+    gap:5px; 
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+
+}
