@@ -11,10 +11,10 @@ body {
 /*navbar*/
 nav {
     margin-top: 15px;
-    position: fixed; /* Bën navbar-in të qëndrojë lart */
+    position: absolute; /* Bën navbar-in të qëndrojë lart */
     top: 0;
     left: 0;
-    width: 100%;
+    width: 97.2%;
     height: 70px;
     z-index: 100; /* Siguron që navbar-i është mbi slideshow */
     display: flex;
@@ -298,3 +298,28 @@ nav a:hover{
     padding-top: 20px;
 
 }
+
+/*about us -------------------------*/
+
+.teksti_about_us{
+   width: 30%;
+ 
+}
+.teksti_about_us_1{
+    width: 30%;
+}
+
+.fotot2{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.fotot_2{
+   width: 25.33%;
+   padding: 30px;
+   display: inline-flex;
+}
+
+
