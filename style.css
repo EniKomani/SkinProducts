@@ -135,11 +135,11 @@ nav a:hover{
 /*contact us ------------*/
 
 .container1 {
-    padding: 20px;
+    padding: 100px;
     background-color:transparent; /* Transparent background */
     border-radius: 10px;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 30px auto;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adding subtle shadow */
     backdrop-filter: blur(10px); /* Blur effect behind the form */
 }
@@ -322,4 +322,33 @@ nav a:hover{
    display: inline-flex;
 }
 
+/*product accessories*/
 
+.teksti_par {
+    padding-top: 30px;
+    padding-right: 50px;
+    margin-top: 50px;
+    white-space: normal; /* Normalizimi i hapësirës */
+    max-width: 90%; /* Kufizimi i gjerësisë për të mos kaluar jashtë */
+}
+
+
+.column1{
+    width: 20.33%;
+    padding: 30px;
+    flex: 1;
+    display: inline-block;
+    justify-content: center;
+}
+.column1 img{
+    height: 300px;
+}
+.row1{
+    display:flex;
+    justify-content: center;
+    gap:5px; 
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
