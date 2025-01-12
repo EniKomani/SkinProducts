@@ -80,11 +80,10 @@ nav a:hover{
 }
 
 .column {
-    float: left;
     width: 20.33%;
-    padding: 10px;
+    padding: 30px;
     flex: 1;
-    display: flex;
+    display: inline-block;
     justify-content: center; 
 }
 
@@ -92,46 +91,35 @@ nav a:hover{
     height:300px;
    
 }
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 .row {
     display:flex;
     justify-content: space-between;
     gap:5px; 
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 30px;
+    padding-top: 20px;
 
 }
-
 .column1 {
-    float: left;
-    width: 20.33%;
-    padding: 0px;
-    
-    flex: 1;
+   padding: 0;
     display: flex;
     justify-content: center; 
+    height: auto; /* Siguro që lartësia të jetë dinamike */
+}
+
+.column1 img {
+    height: 1000x; /* Zmadho imazhet */
 }
 
 .row1 {
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    gap:5px; 
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-top: 230px;
-    padding-bottom: 200px;
+    gap: 30px;
+    padding: 230px 50px 200px; /* Kombino padding për lexim më të mirë */
 }
 
-.column1 img{
-    height: 500px;
-}
+
+
 /*contact us ------------*/
 
 .container1 {
