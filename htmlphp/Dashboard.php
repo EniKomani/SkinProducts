@@ -24,12 +24,11 @@
         <table id="tabela" style="display: none;" border="1">
             <tr>
                 <td>ID</td>
-                <td>Emri</td>
+                <td>Emri/Mbiemri</td>
                 <td>Email</td>
-                <td>Username</td>
+                <td>Password</td>
                 <td>Roli</td>
-                <td>Delete</td>
-                <td>Update</td>
+                
             </tr>
         </table>
 
@@ -88,3 +87,13 @@
         </script>
 </body>
 </html>
+<?php 
+
+session_start();
+include('config.php');
+
+function registerUser($ermi/mbiemri){
+
+} 
+
+?>
