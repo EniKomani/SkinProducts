@@ -1,3 +1,11 @@
+<?php
+    include_once('../PHP/config.php');
+    $sql="SELECT * FROM user";
+    $getusers=$connect->prepare($sql);
+    $getusers->execute();
+    $users=$getusers->fetchAll();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +15,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    
    
     <div style="display:flex; height: 100vh;">
         <div class="sidebar_main">
@@ -24,13 +33,30 @@
         <table id="tabela" style="display: none;" border="1">
             <tr>
                 <td>ID</td>
-                <td>Emri/Mbiemri</td>
+                <td>Full name</td>
                 <td>Email</td>
-                <td>Password</td>
+                <td>User</td>
                 <td>Roli</td>
                 
             </tr>
+                <?php
+            
+                    foreach($users as $user ){
+                        echo "<tr>";
+                        echo"<td> {$user['Id']}</td>";
+                        echo"<td> {$user['Full_name']}</td>";
+                        echo"<td> {$user['Email']}</td>";
+                        echo"<td> {$user['Username']}</td>";
+                        echo"<td> {$user['Role']}</td>";
+                        echo "</tr>";
+                    }
+
+                
+
+
+                ?>
         </table>
+
 
         <table id="tabela1" style="display: none;" border="1">
              <td>ID</td>
@@ -87,13 +113,3 @@
         </script>
 </body>
 </html>
-<?php 
-
-session_start();
-include('config.php');
-
-function registerUser($ermi/mbiemri){
-
-} 
-
-?>

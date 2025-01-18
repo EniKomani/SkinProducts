@@ -16,14 +16,5 @@ try {
 } catch (Exception $e) {
     echo "Something went wrong";
 }
-$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-// Përgatitja e query-t për të shtuar përdoruesin në databazë
-$sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$hashed_password', '$role')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
 ?>

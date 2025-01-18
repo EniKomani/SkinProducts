@@ -1,14 +1,24 @@
 <?php
-// Kontrollo nëse formulari është dërguar
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    include 
-    // Merr të dhënat nga formulari
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    include_once('config.php');
 
-    // (Opsionale) Mund të bësh validime ose të ruash të dhënat në databazë
-    echo "Username: " . htmlspecialchars($username) . "<br>";
-    echo "Password: " . htmlspecialchars($password);
-} else {
-    echo "Nuk ka të dhëna të dërguara!";
+if (isset($_POST['submit'])) {
+    $full_name = $_POST['name'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO user(Full_name, Email, Username, password) values(:full_name, :email, :username, :password)";
+
+    $pergatite = $connect->prepare($sql);
+    
+    $pergatite->bindParam(':full_name', $full_name);
+    $pergatite->bindParam(':email', $email);
+    $pergatite->bindParam(':username', $username);
+    $pergatite->bindParam(':password', $password);
+
+    $pergatite->execute();
+
+    header("Location: ../htmlphp/loginform.html");
+    exit();
+
 }

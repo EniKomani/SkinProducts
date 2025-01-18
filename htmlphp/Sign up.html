@@ -18,16 +18,16 @@
     <div class="container">
         <div class="form-box">
         <form id="passwordform" action="../PHP/signup.php" method="post">
-           <br>
-            <input type="email" id="email" name="email" placeholder=" Email" required>
-           
-              <br>
-               
+                <br>
+                <input type="text" id="name" name="name" placeholder="Full Name"required>
+                <input type="email" id="email" name="email" placeholder=" Email" required>
+                <br>
+                <input type="text" id="username" name="username" placeholder="Username"required>
                 <input type="password" id="password" name="password" placeholder="Create Password"required>
                 <br>
-                <input type="password" id="password1" name="password" placeholder="Confirm Password"required>
+                <input type="password" id="password1" placeholder="Confirm Password"required>
                 
-                <button type="submit">Sign up</button>
+                <button type="submit" name="submit">Sign up</button>
                 <p id="vendos"></p>
               
         </form>
