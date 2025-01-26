@@ -2,11 +2,19 @@
    
    session_start();
    
+   if ($_SESSION['role'] !== 'Admin') {
+    header("Location: ../htmlphp/Home.php");
+    exit();
+   }
+
+
    include_once('../PHP/config.php');
     $sql="SELECT * FROM user";
     $getusers=$connect->prepare($sql);
     $getusers->execute();
     $users=$getusers->fetchAll();
+
+
 ?>
 
 <!DOCTYPE html>
