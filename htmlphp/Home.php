@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,17 +20,21 @@
             <nav>
                 <div class="left_links">
                     <a href="">Home</a>
-                    <a href="About_us.html">About Us</a>
-                    <a href="Contact_us.html">Contact Us</a>
-                    <a href="Product_us.html">Product</a>
-                    <a href="Product_Accessories.html">Product Accessories</a>
+                    <a href="About_us.php">About Us</a>
+                    <a href="Contact_us.php">Contact Us</a>
+                    <a href="Product_us.php">Product</a>
+                    <a href="Product_Accessories.php">Product Accessories</a>
                     <a href="Dashboard.php">Dashboard</a>
                 </div>
                 <img src="../img/logo.png" alt="logo" class="logo">
+                <p ><?php echo isset($_SESSION['email']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></p>
+                <?php if (isset($_SESSION['email'])): ?>
+                    <button class="login_btn"><a href="../PHP/logOut.php">Log out</a></button>
+            <?php else: ?>
                 <button class="login_btn"><a href="loginform.html">Log In</a></button>
+                <?php endif; ?>
             </nav>
-
-
+                      
         
                 <div class="slideshow-container">
 

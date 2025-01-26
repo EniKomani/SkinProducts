@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +17,11 @@
 <body>
     <nav>
         <div class="left_links">
-            <a href="home.html">Home</a>
-            <a href="About_us.html">About Us</a>
-            <a href="Contact_us.html">Contact Us</a>
-            <a href="Product_us.html">Product</a>
-            <a href="Product_Accessories.html">Product Accessories</a>
+            <a href="home.php">Home</a>
+            <a href="About_us.php">About Us</a>
+            <a href="Contact_us.php">Contact Us</a>
+            <a href="Product_us.php">Product</a>
+            <a href="Product_Accessories.php">Product Accessories</a>
             <a href="Dashboard.php">Dashboard</a>
         </div>
         <img src="../img/logo.png" alt="logo" class="logo">

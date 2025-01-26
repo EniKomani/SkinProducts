@@ -1,5 +1,8 @@
 <?php
-    include_once('../PHP/config.php');
+   
+   session_start();
+   
+   include_once('../PHP/config.php');
     $sql="SELECT * FROM user";
     $getusers=$connect->prepare($sql);
     $getusers->execute();
