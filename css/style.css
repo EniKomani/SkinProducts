@@ -355,6 +355,7 @@ nav a:hover{
 
 /*Dashboard----------------------*/
 
+
 .sidebar_main{
     display: inline-block;
     text-align: center;
@@ -381,5 +382,47 @@ nav a:hover{
 .dash_emri2 h3{
     padding-top: 10px;
 }
-/*update------------------*/
+/*product form------------------*/
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.container2 {
+    display: flex; /* Aktivizon Flexbox për këtë kontejner */
+    justify-content: center; /* Qendërzim horizontal */
+    align-items: center; /* Qendërzim vertikal */
+    position: relative; /* Lejon pozicionimin korrekt të kutisë */
+    background-color: rgba(0, 0, 0, 0.05); /* Opsionale: sfond i lehtë për këtë zonë */
+  
+}
+
+
+.form-box2 {
+    width: 400px; /* Gjerësia e katrorit */
+    height: 350px;
+    padding: 20px; /* Hapësirë brenda kutisë */
+    border: 2px solid #ccc; /* Kufiri i kutisë */
+    border-radius: 10px; /* Skaje të rrumbullakosura */
+    background:transparent; /* Sfond i bardhë */
+    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.2); /* Hije për efekt 3D */
+    z-index: 10;
+    margin-right: 100px;
+  
+}
+form input {
+    width: 100%; /* Mbush gjerësinë e plotë të kutisë */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    
+
+}

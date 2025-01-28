@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once('config.php');
+include_once('../PHP/config.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];

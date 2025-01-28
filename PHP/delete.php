@@ -1,7 +1,7 @@
 <?php
 
 
-include_once('config.php');
+include_once('../PHP/config.php');
 
 
 if(isset($_GET['id'])){
