@@ -48,24 +48,34 @@
                 <td>Email</td>
                 <td>User</td>
                 <td>Roli</td>
+                <td>Delete</td>
+                <td>Update</td>
                 
             </tr>
                 <?php
-            
+                if(count($users)>0){
                     foreach($users as $user ){
-                        echo "<tr>";
-                        echo"<td> {$user['Id']}</td>";
-                        echo"<td> {$user['Full_name']}</td>";
-                        echo"<td> {$user['Email']}</td>";
-                        echo"<td> {$user['Username']}</td>";
-                        echo"<td> {$user['Role']}</td>";
-                        echo "</tr>";
+                            echo "<tr>";
+                            echo"<td> {$user['Id']}</td>";
+                            echo"<td> {$user['Full_name']}</td>";
+                            echo"<td> {$user['Email']}</td>";
+                            echo"<td> {$user['Username']}</td>";
+                            echo"<td> {$user['Role']}</td>";
+                            echo"<td><a href='../PHP/delete.php?id={$user['Id']}'>Delete</a></td>";
+                            echo"<td><a href='../PHP/update.php?id={$user['Id']}'>Update</a></td>";
+                            echo "</tr>";
                     }
+                    }
+                        else{
+                        echo "<tr><td> Nuk ka perdorues</td></tr>";
+                    }
+
+            ?>
 
                 
 
 
-                ?>
+                
         </table>
 
 
@@ -75,6 +85,8 @@
              <td>Model</td>
              <td>Name</td>
              <td>Person ID</td>
+             <td>Delete</td>
+             <td>Update</td>
         </table>
        </div>
 
