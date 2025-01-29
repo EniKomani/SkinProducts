@@ -63,22 +63,20 @@
                 <h3 id="product">Product</h3>
                 <h3 id="user">User</h3>
                 <h3 id="contact">Contact us</h3>
+                <h3><a href="Home.php">Website</a></h3>
             </div>   
         </div>
     
         <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-
+   
             <div class="container2" id="container2">
                 <div class="form-box2" id="form-box2">
                     <form id="loginForm" action="../PHP/add_Product.php" method="post" enctype="multipart/form-data">
                         <label for="name">Emri</label>
                         <input type="text" id="name" name="name" placeholder="Enter name"/>
                         <br>               
-                        <label for="modeli">Modeli</label>
-                        <input type="text" id="model" name="model" placeholder="Modeli"/>
-                        <br>
-                        <label for="img">Tipi</label>
-                        <input type="text" id="img" name="type" placeholder="Tipi"/>
+                        <label for="img">Cmimi</label>
+                        <input type="text" id="img" name="type" placeholder="Cmimi"/>
                         <br>
                         <label for="image">Ngarko Imazh:</label>
                         <input type="file" name="image" id="image" accept="image/*" required/>
@@ -104,41 +102,41 @@
             </div>
 
             <div id="productContainer" style="display: none;">
-                <h2>Lista e Produkteve</h2>
-                <table border="1px">
-                    <tr>
-                        <th>ID</th>
-                        <th>Emri</th>
-                        <th>Tipi</th>
-                        <th>Modeli</th>
-                        <th>Imazhi</th>
-                        <th>Admini</th>
-                        <th>Fshi</th>
-                    </tr>
-                    <?php
-                        $stmt = $conn->prepare("SELECT * FROM products");
-                        $stmt->execute();
-                        $result = $stmt->get_result();
+                <div class="table-container">
+                    <h2>Lista e Produkteve</h2>
+                    <table border="1px">
+                        <tr>
+                            <th>ID</th>
+                            <th>Emri</th>
+                            <th>Tipi</th>
+                            <th>Imazhi</th>
+                            <th>Admini</th>
+                            <th>Fshi</th>
+                        </tr>
+                        <?php
+                            $stmt = $conn->prepare("SELECT * FROM products");
+                            $stmt->execute();
+                            $result = $stmt->get_result();
 
-                        if ($result->num_rows > 0) {
-                            while ($product = $result->fetch_assoc()) {
-                                echo "<tr>";
-                                echo "<td>{$product['id']}</td>";
-                                echo "<td>{$product['name']}</td>";
-                                echo "<td>{$product['type']}</td>";
-                                echo "<td>{$product['model']}</td>";
-                                echo "<td><img src='{$product['image_path']}' alt='Product Image' width='50'></td>";
-                                echo "<td>{$product['admin_name']}</td>";
-                                echo "<td><a href='../PHP/delete_product.php?id={$product['id']}'>Fshi</a></td>";
-                                echo "</tr>";
+                            if ($result->num_rows > 0) {
+                                while ($product = $result->fetch_assoc()) {
+                                    echo "<tr>";
+                                    echo "<td>{$product['id']}</td>";
+                                    echo "<td>{$product['name']}</td>";
+                                    echo "<td>{$product['type']}</td>";
+                                    echo "<td><img src='{$product['image_path']}' alt='Product Image' width='50'></td>";
+                                    echo "<td>{$product['admin_name']}</td>";
+                                    echo "<td><a href='../PHP/delete_product.php?id={$product['id']}'>Fshi</a></td>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "<tr><td colspan='7'>Nuk ka produkte.</td></tr>";
                             }
-                        } else {
-                            echo "<tr><td colspan='7'>Nuk ka produkte.</td></tr>";
-                        }
 
-                        $stmt->close();
-                    ?>
-                </table>
+                            $stmt->close();
+                        ?>
+                    </table>
+                </div>
             </div>
         </div> 
 

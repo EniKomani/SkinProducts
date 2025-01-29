@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 if(isset($_POST['submit'])){
     $firstname =$_POST['fistname'];
     $lastname= $_POST['lastname'];
@@ -42,7 +45,7 @@ if(isset($_POST['submit'])){
             <a href="Contact_us.php">Contact Us</a>
             <a href="Product_us.php">Product</a>
             <a href="Product_Accessories.php">Product Accessories</a>
-            <a href="Dashboard.php">Dashboard</a>
+            <?php if ($_SESSION['role'] === "Admin") {echo '<a href="Dashboard.php">Dashboard</a>';}?>
         </div>
         <img src="../img/logo.png" alt="logo" class="logo">
         <button class="login_btn"><a href="loginform.html">Log In</a></button>
