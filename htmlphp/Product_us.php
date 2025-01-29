@@ -6,6 +6,8 @@ include_once('../PHP/config.php');
 $stmt = $conn->prepare("SELECT * FROM products");
 $stmt->execute();
 $result = $stmt->get_result();
+
+ 
 ?>
 
 <!DOCTYPE html>
