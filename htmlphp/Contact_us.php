@@ -1,6 +1,22 @@
 <?php
- session_start();
+if(isset($_POST['submit'])){
+    $firstname =$_POST['fistname'];
+    $lastname= $_POST['lastname'];
+    $email= $_POST['email'];
+    $subject=$_POST['subject'];
+    
+    if(empty($firstname) || empty($lastname) || empty($email) || empty($subject)){
+        
+    }
+    else{
+        $to ="komanieni@gmail.com";
+        
+    }
+}
+
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -32,14 +48,14 @@
         <button class="login_btn"><a href="loginform.html">Log In</a></button>
     </nav>
     <div class="container1">
-        <form action="#"method="post">
+        <form action="Contact_us.php"method="post">
         <label for="firstname">First Name</label>
         <input type="text" id="firstname" name="firstname" placeholder="Your name..." required>
 
-        <label for="Lastname">Last Name</label>
-        <input type="text" id="lname" name="Lastname" placeholder="Your last name..."required>
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="Lastname" placeholder="Your last name..."required>
 
-        <label for="Email">Email</label>
+        <label for="email">Email</label>
         <input type="Email" id="email" name="Email"placeholder="write something..." required>
            
 
