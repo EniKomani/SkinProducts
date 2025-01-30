@@ -45,28 +45,25 @@ if(isset($_POST['submit'])){
             <a href="Contact_us.php">Contact Us</a>
             <a href="Product_us.php">Product</a>
             <a href="Product_Accessories.php">Product Accessories</a>
-            <?php if ($_SESSION['role'] === "Admin") {echo '<a href="Dashboard.php">Dashboard</a>';}?>
+            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === "Admin") { echo '<a href="Dashboard.php">Dashboard</a>';} ?>
         </div>
         <img src="../img/logo.png" alt="logo" class="logo">
         <button class="login_btn"><a href="loginform.html">Log In</a></button>
     </nav>
     <div class="container1">
-        <form action="Contact_us.php"method="post">
-        <label for="firstname">First Name</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Your name..." required>
-
-        <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" name="Lastname" placeholder="Your last name..."required>
+        <form action="../PHP/contact.php"method="post">
+        <label for="firstname">Full Name</label>
+        <input type="text" id="firstname" name="name" placeholder="Your name..." required>
 
         <label for="email">Email</label>
-        <input type="Email" id="email" name="Email"placeholder="write something..." required>
+        <input type="Email" id="email" name="email"placeholder="write something..." required>
            
 
         
         <label for="message">Message</label>
-        <textarea id="subject" name="subject" placeholder="Write something..."></textarea>
+        <textarea id="subject" name="message" placeholder="Write something..."></textarea>
 
-        <input type="submit" value="Submit">
+        <input type="submit" name="submit" value="Submit">
         </form>
     </div>
 
