@@ -75,7 +75,7 @@ session_start();
             <img src="../img/home3.avif" alt="1" style="width: 100%;">
             <p>The Impossible Glow Bronze Hyaluronic Acid & Sea Kelp Glow Drops</p>
             <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-            <p>£29</p><i class="bi bi-handbag"></i>
+            <p>£29</p>
             </div>
         </div>
             
@@ -84,7 +84,7 @@ session_start();
                 <img src="../img/home2.webp" alt="2" style="width: 100%;">
                 <p>Virtuous Circle Ultra Gentle Exfoliator for Sensitive Skin</p>
                 <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-                <p>£29</p><i class="bi bi-handbag"></i>
+                <p>£29</p>
                 </div>
         </div>
             
@@ -92,7 +92,7 @@ session_start();
                 <img src="../img/home1.jpg" alt="3" style="width: 100%;">
                 <p>Rosehip Radiance Bundl Limited Edition Rosehip Cleanser & Face Oil Bundle</p>
                 <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-                <p>£50</p><i class="bi bi-handbag"></i>
+                <p>£50</p>
                 </div>
             </div>
 
@@ -100,7 +100,7 @@ session_start();
                 <img src="../img/home4.webp" alt="4" style="width: 100%;">
                 <p>British Summer Time SPF 30SPF 30 Mineral Sunscreen for Sensitive Skin</p>
                 <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-                    <p>£39</p><i class="bi bi-handbag"></i>
+                    <p>£39</p>
                 </div>
             </div>
         </div>

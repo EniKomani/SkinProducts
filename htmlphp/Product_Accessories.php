@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+include_once('../PHP/config.php');
+
+$stmt = $conn->prepare("SELECT * FROM product_accesories");
+$stmt->execute();
+$result = $stmt->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -27,114 +33,37 @@ session_start();
         <img src="../img/logo.png" alt="logo" class="logo">
         <button class="login_btn"><a href="loginform.html">Log In</a></button>
     </nav>
-   </div>
+   
 
 <div class="teksti_par">
     <h1>The ideal accessories for your routine</h1>
 </div>
 
-<div class="row1">
-    <div class="column1">
-        <img src="../img/aksesori 1.jpg" alt="1" style="width: 100%;">
-        <p>Original Water Absorbent Skincare Wristbands - 100% Cotton</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£15</p><i class="bi bi-handbag"></i>
-    </div>     
-</div>
-    <div class="column1">
-        <img src="../img/aksesori 2.jpg" alt="2" style="width: 100%;">
-        <p>Scalp Massager</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£30</p><i class="bi bi-handbag"></i>
-        </div>
-    </div>
-    <div class="column1">
-        <img src="../img/aksesori 3.jpg" alt="3" style="width: 100%;">
-        <p>Bamboo Stimulating Scalp Massager</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£20</p><i class="bi bi-handbag"></i>
-        </div>
-    </div>
-    <div class="column1">
-        <img src="../img/aksesori 4.jpg" alt="4" style="width: 100%;">
-        <p>Body Shower Brush with Long Handle</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£35</p><i class="bi bi-handbag"></i>
-        </div>
-    </div>
-</div>
+<div class="rowflex1">
+        <?php
+        $count = 0;
+        if ($result->num_rows > 0) {
+            while ($product = $result->fetch_assoc()) {
+                // Hap një div të ri nëse është produkti i parë ose pas çdo grupi prej 4 produktesh
+                if ($count % 4 == 0 && $count != 0) {
+                    echo '</div><div class="rowflex">';
+                }
 
-<div class="row1">
-    <div class="column1">
-        <img src="../img/aksesori 5.jpg" alt="5" style="width: 100%">
-        <p>Exfoliating Loofah</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£35</p><i class="bi bi-handbag"></i>
-        </div>
-     </div>
-     <div class="column1">
-        <img src="../img/aksesori 6.jpg" alt="6" style="width: 100%">
-        <p>MRD Hair brush, Natural Bamboo Paddle Detangling</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£17</p><i class="bi bi-handbag"></i>
-        </div>
-     </div>
-     <div class="column1">
-        <img src="../img/aksesori 7.jpg" alt="7" style="width: 100%">
-        <p>Bamboo brush for hair</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£23</p><i class="bi bi-handbag"></i>
-        </div>
-     </div>
-     <div class="column1">
-        <img src="../img/aksesori 9.jpg" alt="9" style="width: 100%">
-        <p>Exfoliating Loofah</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£45</p><i class="bi bi-handbag"></i>
-        </div>
-     </div>
-    
-</div>
+                echo '<div class="columnflex1">';
+                echo '<img src="' . $product['image_path'] . '" alt="Product Image" style="width: 300px;">';
+                echo '<p>' . $product['name'] . '</p>';
+                echo '<div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">';
+                echo '<p>' . $product['type'] . '</p>';
+                echo '</div>';
+                echo '</div>';
 
-<div class="row1">
-    <div class="column1">
-        <img src="../img/aksesori 14.jpg" alt="14" style="width: 100%">
-        <p>Gua Sha Facial Lifting Tool</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£35</p><i class="bi bi-handbag"></i>
-        </div>
-     </div>
-     <div class="column1">
-        <img src="../img/aksesori 11.jpg" alt="11" style="width: 100%">
-        <p>Natural Loofah Body Scrubber | 100% Natural</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£32</p><i class="bi bi-handbag"></i>
-        </div>
-     </div>
-     <div class="column1">
-        <img src="../img/aksesori 12.jpg" alt="12" style="width: 100%">
-        <p>Body Silicon Scrub</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£20</p><i class="bi bi-handbag"></i>
-        </div>
-     </div>
-     <div class="column1">
-        <img src="../img/aksesori 13.jpg" alt="13" style="width: 100%">
-        <p>Back Washer for Wet or Dry Brushing</p>
-        <div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">
-        <p>£27</p><i class="bi bi-handbag"></i>
-        </div>
-     </div>
-    
-</div>
-
-
-
-
-
-
-   
-  
+                $count++;
+            }
+        } else {
+            echo '<p>No products available.</p>';
+        }
+        ?>
+</div>   
 
 </body>
 </html>
