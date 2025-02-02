@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Web Page with Navbar</title>
    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -28,13 +28,18 @@ session_start();
 
 
                 </div>
+                
                 <img src="../img/logo.png" alt="logo" class="logo">
+                <div class="user_info">
+                    
+
                 <p ><?php echo isset($_SESSION['email']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></p>
                 <?php if (isset($_SESSION['email'])): ?>
                     <button class="login_btn"><a href="../PHP/logOut.php">Log out</a></button>
                 <?php else: ?>
                 <button class="login_btn"><a href="loginform.html">Log In</a></button>
                 <?php endif; ?>
+                </div>
             </nav>
                       
         

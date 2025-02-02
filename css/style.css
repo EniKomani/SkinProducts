@@ -11,14 +11,14 @@ body {
 /*navbar*/
 nav {
     margin-top: 15px;
-    position: absolute; /* Bën navbar-in të qëndrojë lart */
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
     height: 70px;
-    z-index: 100; /* Siguron që navbar-i është mbi slideshow */
+    z-index: 100;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Siguron hapësirë midis elementeve */
     align-items: center;
     background-color: beige;
     border-radius: 30px;
@@ -26,43 +26,283 @@ nav {
     padding: 0 20px;
 }
 
-
-nav img{
-    width: 50px;
-    height: auto;
-    margin-right: 400px;
-}
-
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-.left_links a{
-    padding: 30px;
-}
 
-nav a:hover{
-    color: white;
-    background-color:rgb(189, 101, 101);
-    border-radius: 10px;
-}
-
-.logo{
-    width: 40px;
+nav img {
+    width: 50px;
     height: auto;
 }
 
-.login_btn{
+
+.left_links {
+    display: flex;
+    gap: 15px;
+}
+
+.left_links a {
+    padding: 20px;
+}
+
+nav a:hover {
+    color: white;
+    background-color: rgb(189, 101, 101);
+    border-radius: 10px;
+}
+
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 30px; 
+}
+
+
+.user_info {
+    display: flex;
+    gap: 10px; 
+    align-items: center; 
+}
+
+
+.user_info .guest {
+    margin: 0;
+    padding: 10px;
+}
+
+
+.login_btn {
     background: transparent;
     background-color: none;
     border-style: none;
 }
 
-.login_btn a{
+.login_btn a {
     padding: 30px;
-
 }
+
+/* Responsiviteti për madhësi më të vogla ekranesh */
+
+@media (max-width: 1324px) {
+    .left_links a {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1224px) {
+    .left_links a {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1124px) {
+    nav {
+        font-size: small;
+    }
+
+    .left_links a {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 1040px) {
+    nav {
+        font-size: small;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .left_links {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .left_links a {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 959px) {
+    nav {
+        font-size: small;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    nav img {
+        width: 50px;
+        margin-right: 20px;
+    }
+
+    .left_links {
+        gap: 10px;
+    }
+
+    .left_links a {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .logo {
+        margin-right: 30px; 
+    }
+
+    /* Siguron që Guest dhe Login janë afër njëri-tjetrit */
+    .user_info {
+        margin-left: auto; /* Siguron që Guest dhe Login janë në anën e djathtë */
+        gap: 10px;
+    }
+}
+
+@media (max-width: 958px) {
+    nav {
+        font-size: small;
+        display: flex;
+        justify-content: space-between; /* Siguron që elementi i parë dhe i fundit janë në skajet e kundërta */
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* Siguro që logoja të shkojë në të djathtën */
+    .logo {
+        margin-left: auto; /* Shtyn logon në të djathtën */
+        margin-right: 0; /* Eliminon marginën në të djathtë për t'i dhënë hapësirë */
+        width: 50px;  /* Madhësia e logos */
+        height: auto;
+    }
+
+    /* Përshtat lidhjet në navbar */
+    .left_links {
+        display: flex;
+        gap: 10px;
+    }
+
+    .left_links a {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    /* Siguro që Guest dhe Login të jenë afër njëri-tjetrit */
+    .user_info {
+        margin-left: auto; /* Shtyn "Guest" dhe "Login" në të djathtën */
+        gap: 10px;
+    }
+
+    .login_btn a {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 573px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px;
+        flex-wrap: nowrap; 
+        /* Siguron që elementët të qëndrojnë në një rresht */
+    }
+
+    /* Logoja më e vogël dhe afër të majtës */
+    .logo {
+        width: 30px;  /* E bëj më të vogël */
+        height: auto;
+        margin-left: 5px; /* E afroj majtas */
+    }
+
+    /* Lidhjet e navigimit të jenë ngjitur */
+    .left_links {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        margin-right: auto;
+        
+    }
+
+    .left_links a {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    /* Guest dhe Log In të jenë në të njëjtën linjë me navbar-in */
+    .user_info {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Hapësirë mes tyre */
+        margin-left: auto; /* I shtyn në të djathtë */
+        
+    }
+
+    .user_info a {
+        padding: 5px 8px;
+        font-size: 12px;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 507px) {
+    nav {
+        font-size: 5px; /* Zvogëlon madhësinë e fontit për navbar-in */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px; /* Zvogëlon hapësirën në navbar */
+        flex-wrap: nowrap;
+    }
+
+    /* Logoja më e vogël */
+    .logo {
+        margin-left: 0; 
+        width: 25px; /* Zvogëlon madhësinë e logos */
+        height: auto;
+    }
+
+    /* Lidhjet në navbar (Product, Accessories, etj) */
+    .left_links {
+        display: flex;
+        gap: 8px; /* Hapësirë më e vogël mes lidhjeve */
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-right: auto;
+    }
+
+    .left_links a {
+        padding: 4px 8px; /* Zvogëlon padding-un dhe bën tekstin më të vogël */
+        font-size: 10px; /* Madhësia më e vogël e fontit */
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Guest dhe Login në navbar */
+    .user_info {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* Hapësirë më e vogël mes Guest dhe Login */
+        margin-left: auto;
+    }
+
+    .user_info a {
+        padding: 4px 6px;
+        font-size: 10px; /* Madhësi më e vogël për Guest dhe Login */
+        text-decoration: none;
+    }
+
+    .login_btn a {
+        padding: 4px 6px;
+    }
+}
+
+
+
+
+
+
 
 #nje{
 
@@ -90,6 +330,7 @@ nav a:hover{
     flex: 1;
     display: inline-block;
     justify-content: center; 
+
 }
 
 .column img{
@@ -126,6 +367,85 @@ nav a:hover{
     gap: 30px;
     padding: 230px 50px 200px; /* Kombino padding për lexim më të mirë */
 }
+
+@media (max-width: 1120px) {
+    
+    .column img{
+        height:290px; 
+    }
+}
+
+@media (max-width: 1035px) {
+    
+    .column img{
+        height:200px;   
+    }
+}
+
+@media (max-width: 800px) {
+    
+    .column p{
+        font-size: small;
+    }
+}
+@media (max-width: 700px) {
+    
+    .column img{
+        height:180px; 
+    }
+}
+@media (max-width: 662px) {
+    .row {
+        display:flex;
+        justify-content: space-between;
+        gap:5px; 
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+} 
+    @media (max-width: 655px) {
+       
+        .row {
+            display:flex;
+            justify-content: space-between;
+            gap:5px; 
+            padding-right: 0px;
+            padding-left: 0px;
+            padding-top: 20px;
+        
+        }
+}
+@media (max-width: 636px) {
+       
+    .row {
+        display:flex;
+        justify-content: space-between;
+        gap:5px; 
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+   
+}
+
+@media (max-width: 524px) {
+       
+    .row {
+        display:flex;
+        justify-content: space-between;
+        gap:5px; 
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+
+    .column img{
+        height:140px; 
+    }
+}
+
 
 
 
