@@ -9,31 +9,31 @@
 
 
 .container {
-    display: flex; /* Aktivizon Flexbox për këtë kontejner */
-    justify-content: center; /* Qendërzim horizontal */
-    align-items: center; /* Qendërzim vertikal */
-    height: 80vh; /* Lartësia e ekranit */
-    position: relative; /* Lejon pozicionimin korrekt të kutisë */
-    background-color: rgba(0, 0, 0, 0.05); /* Opsionale: sfond i lehtë për këtë zonë */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 80vh; 
+    position: relative; 
+    background-color: rgba(0, 0, 0, 0.05); 
   
 }
 
 
 
 .form-box {
-    width: 400px; /* Gjerësia e katrorit */
+    width: 400px;
     height: 350px;
-    padding: 20px; /* Hapësirë brenda kutisë */
-    border: 2px solid #ccc; /* Kufiri i kutisë */
-    border-radius: 10px; /* Skaje të rrumbullakosura */
-    background:transparent; /* Sfond i bardhë */
-    box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2); /* Hije për efekt 3D */
+    padding: 20px; 
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    background:transparent; 
+    box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2); 
     z-index: 10;
     
   
 }
 form input {
-    width: 100%; /* Mbush gjerësinë e plotë të kutisë */
+    width: 100%; 
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -45,7 +45,7 @@ form input {
 }
 
 
-/* Stilimi për butonin submit */
+
 button {
     width: 100%;
     padding: 12px;
@@ -63,11 +63,11 @@ button:hover {
 }
 
 p {
-    font-size: 16px; /* Opsionale, për madhësinë e tekstit */
+    font-size: 16px; 
 }
 
 a {
-    margin-left: 20px; /* Krijon hapësirë midis tekstit dhe lidhjes */
+    margin-left: 20px; 
 }
 
 

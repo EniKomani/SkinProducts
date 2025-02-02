@@ -18,7 +18,7 @@ nav {
     height: 70px;
     z-index: 100;
     display: flex;
-    justify-content: space-between; /* Siguron hapësirë midis elementeve */
+    justify-content: space-between; 
     align-items: center;
     background-color: beige;
     border-radius: 30px;
@@ -152,9 +152,9 @@ nav a:hover {
         margin-right: 30px; 
     }
 
-    /* Siguron që Guest dhe Login janë afër njëri-tjetrit */
+    
     .user_info {
-        margin-left: auto; /* Siguron që Guest dhe Login janë në anën e djathtë */
+        margin-left: auto; 
         gap: 10px;
     }
 }
@@ -163,20 +163,20 @@ nav a:hover {
     nav {
         font-size: small;
         display: flex;
-        justify-content: space-between; /* Siguron që elementi i parë dhe i fundit janë në skajet e kundërta */
+        justify-content: space-between; 
         align-items: center;
         flex-wrap: wrap;
     }
 
-    /* Siguro që logoja të shkojë në të djathtën */
+    
     .logo {
-        margin-left: auto; /* Shtyn logon në të djathtën */
-        margin-right: 0; /* Eliminon marginën në të djathtë për t'i dhënë hapësirë */
-        width: 50px;  /* Madhësia e logos */
+        margin-left: auto; 
+        margin-right: 0;
+        width: 50px;  
         height: auto;
     }
 
-    /* Përshtat lidhjet në navbar */
+    
     .left_links {
         display: flex;
         gap: 10px;
@@ -187,9 +187,9 @@ nav a:hover {
         font-size: 10px;
     }
 
-    /* Siguro që Guest dhe Login të jenë afër njëri-tjetrit */
+    
     .user_info {
-        margin-left: auto; /* Shtyn "Guest" dhe "Login" në të djathtën */
+        margin-left: auto; 
         gap: 10px;
     }
 
@@ -205,17 +205,16 @@ nav a:hover {
         align-items: center;
         padding: 5px 10px;
         flex-wrap: nowrap; 
-        /* Siguron që elementët të qëndrojnë në një rresht */
+        
     }
 
-    /* Logoja më e vogël dhe afër të majtës */
+    
     .logo {
-        width: 30px;  /* E bëj më të vogël */
+        width: 30px;  
         height: auto;
-        margin-left: 5px; /* E afroj majtas */
-    }
+        margin-left: 5px; 
 
-    /* Lidhjet e navigimit të jenë ngjitur */
+   
     .left_links {
         display: flex;
         gap: 5px;
@@ -229,12 +228,12 @@ nav a:hover {
         font-size: 12px;
     }
 
-    /* Guest dhe Log In të jenë në të njëjtën linjë me navbar-in */
+    
     .user_info {
         display: flex;
         align-items: center;
-        gap: 8px; /* Hapësirë mes tyre */
-        margin-left: auto; /* I shtyn në të djathtë */
+        gap: 8px; 
+        margin-left: auto; 
         
     }
 
@@ -244,52 +243,53 @@ nav a:hover {
         text-decoration: none;
     }
 }
+}
 
 @media (max-width: 507px) {
     nav {
-        font-size: 5px; /* Zvogëlon madhësinë e fontit për navbar-in */
+        font-size: 5px; 
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5px 10px; /* Zvogëlon hapësirën në navbar */
+        padding: 5px 10px;
         flex-wrap: nowrap;
     }
 
-    /* Logoja më e vogël */
+    
     .logo {
         margin-left: 0; 
-        width: 25px; /* Zvogëlon madhësinë e logos */
+        width: 25px; 
         height: auto;
     }
 
-    /* Lidhjet në navbar (Product, Accessories, etj) */
+    
     .left_links {
         display: flex;
-        gap: 8px; /* Hapësirë më e vogël mes lidhjeve */
+        gap: 8px; 
         align-items: center;
         flex-wrap: nowrap;
         margin-right: auto;
     }
 
     .left_links a {
-        padding: 4px 8px; /* Zvogëlon padding-un dhe bën tekstin më të vogël */
-        font-size: 10px; /* Madhësia më e vogël e fontit */
+        padding: 4px 8px; 
+        font-size: 10px; 
         white-space: nowrap;
         display: flex;
         align-items: center;
     }
 
-    /* Guest dhe Login në navbar */
+    
     .user_info {
         display: flex;
         align-items: center;
-        gap: 12px; /* Hapësirë më e vogël mes Guest dhe Login */
+        gap: 12px; 
         margin-left: auto;
     }
 
     .user_info a {
         padding: 4px 6px;
-        font-size: 10px; /* Madhësi më e vogël për Guest dhe Login */
+        font-size: 10px; 
         text-decoration: none;
     }
 
@@ -302,29 +302,29 @@ nav a:hover {
 @media (max-width: 440px) {
     
     .logo {
-        width: 18px; /* Zvogëlon madhësinë e logos */
+        width: 18px; 
         height: auto;
     }
 
     .left_links a {
-        padding: 4px 8px; /* Zvogëlon padding-un dhe bën tekstin më të vogël */
-        font-size: 7px; /* Madhësia më e vogël e fontit */
+        padding: 4px 8px; 
+        font-size: 7px; 
         white-space: nowrap;
         display: flex;
         align-items: center;
     }
 
-    /* Guest dhe Login në navbar */
+    
     .user_info {
         display: flex;
         align-items: center;
-        gap: 12px; /* Hapësirë më e vogël mes Guest dhe Login */
+        gap: 12px; 
         margin-left: auto;
     }
 
     .user_info a {
         padding: 4px 6px;
-        font-size: 10px; /* Madhësi më e vogël për Guest dhe Login */
+        font-size: 10px; 
         text-decoration: none;
     }
 
@@ -337,29 +337,29 @@ nav a:hover {
 @media (max-width: 400px) {
     
     .logo {
-        width: 15px; /* Zvogëlon madhësinë e logos */
+        width: 15px; 
         height: auto;
     }
 
     .left_links a {
-        padding: 4px 8px; /* Zvogëlon padding-un dhe bën tekstin më të vogël */
-        font-size: 7px; /* Madhësia më e vogël e fontit */
+        padding: 4px 8px; 
+        font-size: 7px; 
         white-space: nowrap;
         display: flex;
         align-items: center;
     }
 
-    /* Guest dhe Login në navbar */
+    
     .user_info {
         display: flex;
         align-items: center;
-        gap: 12px; /* Hapësirë më e vogël mes Guest dhe Login */
+        gap: 12px;
         margin-left: auto;
     }
 
     .user_info a {
         padding: 4px 6px;
-        font-size: 10px; /* Madhësi më e vogël për Guest dhe Login */
+        font-size: 10px; 
         text-decoration: none;
     }
 
@@ -379,7 +379,7 @@ nav a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: auto; /* Siguron që të jetë sa përmbajtja */
+    height: auto; 
     width: 100%;
     overflow: hidden;
 }
@@ -424,19 +424,20 @@ nav a:hover {
    padding: 0;
     display: flex;
     justify-content: center; 
-    height: auto; /* Siguro që lartësia të jetë dinamike */
+    height: auto;
 }
 
 .column1 img {
-    height: 1000x; /* Zmadho imazhet */
+    height: 1000x;
 }
 
 .row1 {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    padding: 230px 50px 200px; /* Kombino padding për lexim më të mirë */
+    padding: 230px 50px 200px; 
 }
+
 
 @media (max-width: 1120px) {
     
@@ -523,37 +524,36 @@ nav a:hover {
 
 .container1 {
     padding: 100px;
-    background-color:transparent; /* Transparent background */
+    background-color:transparent; 
     border-radius: 10px;
     max-width: 600px;
     margin: 30px auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adding subtle shadow */
-    backdrop-filter: blur(10px); /* Blur effect behind the form */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); 
 }
 
 
-/* Input, select, and textarea */
+
 .container1 input, .container1 select, .container1 textarea {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Rounded corners for inputs */
+    border-radius: 8px; 
     font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
-    transition: all 0.3s ease; /* Smooth transition for focus */
+    background-color: rgba(255, 255, 255, 0.9); 
+    transition: all 0.3s ease; 
 }
 
-/* Focus effect */
 .container1 input:focus, .container1 select:focus, .container1 textarea:focus {
     outline: none;
     border: 1px solid #04AA6D;
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 10px rgba(0, 170, 109, 0.5); /* Add glow effect on focus */
+    box-shadow: 0px 0px 10px rgba(0, 170, 109, 0.5); 
 }
 
-/* Label styling */
+
 .container1 label {
     font-size: 18px;
     font-weight: bold;
@@ -562,7 +562,7 @@ nav a:hover {
     margin-bottom: 6px;
 }
 
-/* Submit button */
+
 .container1 input[type="submit"] {
     background-color:brown;
     color: white;
@@ -574,7 +574,7 @@ nav a:hover {
     transition: background-color 0.3s ease;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .container1 {
         width: 90%;
@@ -594,7 +594,7 @@ nav a:hover {
     position: relative;
     max-width: 100%;
     height: auto;
-    min-height: 50vh; /* Opsional, për të shmangur lartësinë e tepërt */
+    min-height: 50vh; 
     overflow: hidden;
 
 
@@ -605,7 +605,7 @@ nav a:hover {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Korrigjon pozicionin që të jetë fiks në mes */
+    transform: translateY(-50%); 
     width: auto;
     padding: 16px;
     color: white;
@@ -858,26 +858,26 @@ nav a:hover {
 
 .teksti_about_us, .teksti_about_us_1 {
     width: 30%;
-    max-width: 400px; /* Kufizon gjerësinë e secilës kuti */
-    overflow: hidden; /* Parandalon që teksti të dalë jashtë */
-    word-wrap: break-word; /* Shkel fjalët në fund të linjës nëse është e nevojshme */
-    margin: 0 20px; /* Hapësira më e madhe në mes të div-ëve */
-    display: inline-block; /* E bën secilin div në një bllok të pavarur */
-    vertical-align: top; /* Siguron që blloqet të mos shkojnë në një rresht të ri */
+    max-width: 400px; 
+    overflow: hidden; 
+    word-wrap: break-word; 
+    margin: 0 20px; 
+    display: inline-block; 
+    vertical-align: top; 
 }
 
 @media (max-width: 768px) {
     .teksti_about_us, .teksti_about_us_1 {
-        width: 100%; /* Në ekrane të vogla, secila kuti merr tërë hapësirën */
-        margin: 40px 0; /* Hapësira më e madhe vertikale midis div-ëve */
-        display: block; /* Në ekran të vogël, secili div është në një rresht të ri */
-        height: auto; /* Lejon që lartësia të përshtatet në përmbajtje */
+        width: 100%; 
+        margin: 40px 0; 
+        display: block;
+        height: auto; 
     }
 }
 
 @media (max-width: 980px) {
     .teksti_about_us, .teksti_about_us_1 {
-        width: 100%; /* Në ekrane të vogla, secila kuti merr tërë hapësirën */
+        width: 100%; 
         margin: 40px 0;
         display: block;
         height: auto;
@@ -913,8 +913,8 @@ nav a:hover {
 
 @media (max-width: 620px) {
     .teksti_about_us, .teksti_about_us_1 {
-        width: 100%; /* Në ekrane të vogla, secila kuti merr tërë hapësirën */
-        margin: 40px 0; /* Hapësira vertikale midis div-ëve */
+        width: 100%; 
+        margin: 40px 0;
     }
 }
 @media (max-width: 513px) {
@@ -990,8 +990,8 @@ nav a:hover {
     padding-top: 30px;
     padding-right: 50px;
     margin-top: 50px;
-    white-space: normal; /* Normalizimi i hapësirës */
-    max-width: 90%; /* Kufizimi i gjerësisë për të mos kaluar jashtë */
+    white-space: normal; 
+    max-width: 90%; 
 }
 
 @media (max-width: 1315px) {
@@ -1128,15 +1128,15 @@ nav a:hover {
 /*Dashboard----------------------*/
 
     .table-container {
-        width: 100%; /* Mund ta rregullosh sipas dëshirës */
-        max-height: 500px; /* Kufizon lartësinë e tabelës */
-        overflow-y: auto; /* Shton scroll vetëm në drejtimin vertikal */
+        width: 100%; 
+        max-height: 500px; 
+        overflow-y: auto; 
     }
 
     .table-container1{
-        width: 100%; /* Mund ta rregullosh sipas dëshirës */
-        max-height: 500px; /* Kufizon lartësinë e tabelës */
-        overflow-y: auto; /* Shton scroll vetëm në drejtimin vertikal */
+        width: 100%; 
+        max-height: 500px; 
+        overflow-y: auto; 
     }
 
 .sidebar_main{
@@ -1180,28 +1180,27 @@ nav a:hover {
 }
 
 .container2 {
-    display: flex; /* Aktivizon Flexbox për këtë kontejner */
-    justify-content: center; /* Qendërzim horizontal */
-    align-items: center; /* Qendërzim vertikal */
-    position: relative; /* Lejon pozicionimin korrekt të kutisë */
-    background-color: rgba(0, 0, 0, 0.05); /* Opsionale: sfond i lehtë për këtë zonë */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+    background-color: rgba(0, 0, 0, 0.05); 
 }
 
 
 .form-box2 {
-    width: 400px; /* Gjerësia e katrorit */
+    width: 400px; 
     height: 350px;
-    padding: 20px; /* Hapësirë brenda kutisë */
-    border: 2px solid #ccc; /* Kufiri i kutisë */
-    border-radius: 10px; /* Skaje të rrumbullakosura */
-    background:transparent; /* Sfond i bardhë */
-    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.2); /* Hije për efekt 3D */
+    padding: 20px; 
+    border-radius: 10px; 
+    background:transparent; 
+    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.2); 
     z-index: 10;
     margin-right: 100px;
   
 }
 form input {
-    width: 100%; /* Mbush gjerësinë e plotë të kutisë */
+    width: 100%; 
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -1224,29 +1223,29 @@ form input {
 
 
 .container3 {
-    display: flex; /* Aktivizon Flexbox për këtë kontejner */
-    justify-content: center; /* Qendërzim horizontal */
-    align-items: center; /* Qendërzim vertikal */
-    position: relative; /* Lejon pozicionimin korrekt të kutisë */
-    background-color: rgba(0, 0, 0, 0.05); /* Opsionale: sfond i lehtë për këtë zonë */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.05); 
     margin-left: 150px;
 }
 
 
 .form-box3 {
-    width: 400px; /* Gjerësia e katrorit */
+    width: 400px; 
     height: 350px;
-    padding: 20px; /* Hapësirë brenda kutisë */
-    border: 2px solid #ccc; /* Kufiri i kutisë */
-    border-radius: 10px; /* Skaje të rrumbullakosura */
-    background:transparent; /* Sfond i bardhë */
-    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.2); /* Hije për efekt 3D */
+    padding: 20px; 
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    background:transparent; 
+    box-shadow: 0px 20px 8px rgba(0, 0, 0, 0.2); 
     z-index: 10;
     margin-right: 100px;
   
 }
 form input {
-    width: 100%; /* Mbush gjerësinë e plotë të kutisë */
+    width: 100%; 
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;

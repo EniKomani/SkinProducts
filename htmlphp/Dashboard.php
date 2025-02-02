@@ -26,7 +26,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* Stil për të qendruar lista e përdoruesve në qendër të majtë */
+
         #userContainer {
             display: flex;
             justify-content: flex-start; 

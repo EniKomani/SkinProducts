@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-    // Ngarko imazhin
+    
     if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
         $image = $_FILES['image'];
         $imagePath = "../img/product/" . basename($image['name']);
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("ssss", $name, $type, $imagePath, $admin_name);
 
         if ($stmt->execute()) {
-            header("Location: ../htmlphp/Dashboard.php"); // Rinisni në faqen e produkteve pas shtimit të sukseshem
+            header("Location: ../htmlphp/Dashboard.php"); 
             exit();
         } else {
             echo "Gabim gjatë shtimit të produktit.";

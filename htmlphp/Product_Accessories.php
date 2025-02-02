@@ -44,7 +44,7 @@ $result = $stmt->get_result();
         $count = 0;
         if ($result->num_rows > 0) {
             while ($product = $result->fetch_assoc()) {
-                // Hap një div të ri nëse është produkti i parë ose pas çdo grupi prej 4 produktesh
+                
                 if ($count % 4 == 0 && $count != 0) {
                     echo '</div><div class="rowflex">';
                 }
