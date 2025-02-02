@@ -29,7 +29,7 @@ session_start();
     <img src="../img/about f1.jpg" width="100%">
 </div>
 
-    <div style="display: flex; justify-content: space-around; margin-top: 100px;">
+    <div style="display: flex; justify-content: space-around; margin-top: 100px;gap: 40px; ">
         <div class="teksti_about_us">
             <p><b>Rreth Nesh</b> <br>
 
@@ -41,6 +41,7 @@ session_start();
             </p>
             <br>
         </div>
+        
         
         <div class="teksti_about_us_1">
             <br>

@@ -294,7 +294,78 @@ nav a:hover {
     }
 
     .login_btn a {
+        padding: 3px 5px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 440px) {
+    
+    .logo {
+        width: 18px; /* Zvogëlon madhësinë e logos */
+        height: auto;
+    }
+
+    .left_links a {
+        padding: 4px 8px; /* Zvogëlon padding-un dhe bën tekstin më të vogël */
+        font-size: 7px; /* Madhësia më e vogël e fontit */
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Guest dhe Login në navbar */
+    .user_info {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* Hapësirë më e vogël mes Guest dhe Login */
+        margin-left: auto;
+    }
+
+    .user_info a {
         padding: 4px 6px;
+        font-size: 10px; /* Madhësi më e vogël për Guest dhe Login */
+        text-decoration: none;
+    }
+
+    .login_btn a {
+        padding: 4px 6px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    
+    .logo {
+        width: 15px; /* Zvogëlon madhësinë e logos */
+        height: auto;
+    }
+
+    .left_links a {
+        padding: 4px 8px; /* Zvogëlon padding-un dhe bën tekstin më të vogël */
+        font-size: 7px; /* Madhësia më e vogël e fontit */
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Guest dhe Login në navbar */
+    .user_info {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* Hapësirë më e vogël mes Guest dhe Login */
+        margin-left: auto;
+    }
+
+    .user_info a {
+        padding: 4px 6px;
+        font-size: 10px; /* Madhësi më e vogël për Guest dhe Login */
+        text-decoration: none;
+    }
+
+    .login_btn a {
+        padding: 4px 6px;
+        font-size: 6px;
     }
 }
 
@@ -304,16 +375,15 @@ nav a:hover {
 
 
 
-#nje{
-
+#nje {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 650px;
-    width: 100vw;
-    max-width: 100%;
+    height: auto; /* Siguron që të jetë sa përmbajtja */
+    width: 100%;
     overflow: hidden;
 }
+
   
 /*fotot e para ---------------------*/
 .text{
@@ -511,6 +581,7 @@ nav a:hover {
     }
 }
 /* Slideshow-----------------------------*/
+
 .slideshow-wrapper {
     display: flex;
     justify-content: center;
@@ -520,30 +591,28 @@ nav a:hover {
 
 
 .slideshow-container {
-    max-width: 400px;
     position: relative;
-    margin: auto;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fff;
     max-width: 100%;
-    height: 650px;
-  }
+    height: auto;
+    min-height: 50vh; /* Opsional, për të shmangur lartësinë e tepërt */
+    overflow: hidden;
+
+
+  } 
   
 
   .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%); /* Korrigjon pozicionin që të jetë fiks në mes */
     width: auto;
-    margin-top: -22px;
     padding: 16px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 3px;
     user-select: none;
   }
   
@@ -585,6 +654,56 @@ nav a:hover {
     from {opacity: .4}
     to {opacity: 1}
   }
+  @media (max-width: 500px) {
+    
+    .column {
+        width: 20.33%;
+        padding: 0px;
+        flex: 1;
+        display: inline-block;
+        justify-content: center; 
+    
+    }
+    
+    .column img{
+        height:200px;
+       
+    }}
+    
+    @media (max-width: 423){
+        .column {
+            width: 20.33%;
+            padding: 0px;
+            flex: 1;
+            display: inline-block;
+            justify-content: center; 
+        
+        }
+        
+        .column img{
+            height:100px;
+           
+        }
+    }
+    @media (max-width: 370px){
+        .column {
+            width: 20.33%;
+            padding: 0px;
+            flex: 1;
+            display: inline-block;
+            justify-content: center; 
+        
+        }
+        
+        .column img{
+            height:20px;
+           
+        }
+    }
+  
+    
+    
+  
   /*produkti*/
   
   .columnflex {
@@ -597,6 +716,7 @@ nav a:hover {
 }
 
 .columnflex img{
+    width: 300px;
     height:300px;
    
 }
@@ -620,15 +740,201 @@ nav a:hover {
 
 }
 
+@media (max-width: 1315px) {
+
+    .columnflex {
+        width: 20.33%;
+        padding: 30px;
+    }
+    
+    .columnflex img{
+        width: 200px;
+        height: 200px;
+    }
+
+      .rowflex {
+        gap:5px; 
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 50px;
+
+    
+    }
+
+}
+
+@media (max-width: 980px) {
+    .columnflex {
+        width: 20.33%;
+        padding: 30px;
+    }
+    
+    .columnflex img{
+        width: 150px;
+        height: 150px;
+    }
+
+      .rowflex {
+        gap:3px; 
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 765px) {
+    .columnflex {
+        width: 20.33%;
+        padding: 30px;
+    }
+    
+    .columnflex img{
+        width: 125px;
+        height: 125px;
+    }
+
+    .rowflex{
+        gap:3px; 
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 0px;
+    }
+
+    .columnflex p{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 645px) {
+    .columnflex {
+        width: 20.33%;
+        padding: 30px;
+    }
+    
+    .columnflex img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .columnflex p{
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 525px) {
+    .columnflex {
+        width: 20.33%;
+        padding: 20px;
+    }
+    
+    .columnflex img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .columnflex p{
+        font-size: 6px;
+    }
+}
+    
+@media (max-width: 415px) {
+    .columnflex {
+        width: 20.33%;
+        padding: 30px;
+    }
+    
+    .columnflex img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .columnflex p{
+        font-size: 4px;
+        width: 50px;
+    }
+}
+
 /*about us -------------------------*/
 
-.teksti_about_us{
-   width: 30%;
- 
-}
-.teksti_about_us_1{
+.teksti_about_us, .teksti_about_us_1 {
     width: 30%;
+    max-width: 400px; /* Kufizon gjerësinë e secilës kuti */
+    overflow: hidden; /* Parandalon që teksti të dalë jashtë */
+    word-wrap: break-word; /* Shkel fjalët në fund të linjës nëse është e nevojshme */
+    margin: 0 20px; /* Hapësira më e madhe në mes të div-ëve */
+    display: inline-block; /* E bën secilin div në një bllok të pavarur */
+    vertical-align: top; /* Siguron që blloqet të mos shkojnë në një rresht të ri */
 }
+
+@media (max-width: 768px) {
+    .teksti_about_us, .teksti_about_us_1 {
+        width: 100%; /* Në ekrane të vogla, secila kuti merr tërë hapësirën */
+        margin: 40px 0; /* Hapësira më e madhe vertikale midis div-ëve */
+        display: block; /* Në ekran të vogël, secili div është në një rresht të ri */
+        height: auto; /* Lejon që lartësia të përshtatet në përmbajtje */
+    }
+}
+
+@media (max-width: 980px) {
+    .teksti_about_us, .teksti_about_us_1 {
+        width: 100%; /* Në ekrane të vogla, secila kuti merr tërë hapësirën */
+        margin: 40px 0;
+        display: block;
+        height: auto;
+    }
+}
+
+@media (max-width: 979px) {
+    .teksti_about_us, .teksti_about_us_1 {
+        width: 100%;
+        margin: 40px 0;
+        display: block;
+        height: auto;
+    }
+}
+
+@media (max-width: 845px) {
+    .teksti_about_us, .teksti_about_us_1 {
+        width: 100%;
+        margin: 40px 0;
+        display: block;
+        height: auto;
+    }
+}
+
+@media (max-width: 840px) {
+    .teksti_about_us, .teksti_about_us_1 {
+        width: 100%;
+        margin: 40px 0;
+        display: block;
+        height: auto;
+    }
+}
+
+@media (max-width: 620px) {
+    .teksti_about_us, .teksti_about_us_1 {
+        width: 100%; /* Në ekrane të vogla, secila kuti merr tërë hapësirën */
+        margin: 40px 0; /* Hapësira vertikale midis div-ëve */
+    }
+}
+@media (max-width: 513px) {
+    .fotot2{
+        margin-top: 0px;
+        margin-bottom: 80px;
+        justify-content: space-around;
+        text-align: center;
+    }
+    
+    .fotot_2{
+       width: 25.33%;
+       padding: 0px;
+       display: inline-flex;
+    }    
+
+}
+
+
+
 
 .fotot2{
     margin-top: 80px;
@@ -642,6 +948,8 @@ nav a:hover {
    padding: 30px;
    display: inline-flex;
 }
+
+
 
 /*product accessories*/
 
@@ -684,6 +992,136 @@ nav a:hover {
     margin-top: 50px;
     white-space: normal; /* Normalizimi i hapësirës */
     max-width: 90%; /* Kufizimi i gjerësisë për të mos kaluar jashtë */
+}
+
+@media (max-width: 1315px) {
+
+    .columnflex1 {
+        width: 20.33%;
+        padding: 30px;
+    }
+    
+    .columnflex1 img{
+        width: 200px;
+        height: 200px;
+    }
+
+      .rowflex1 {
+        gap:5px; 
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 50px;
+
+    
+    }
+
+}
+
+@media (max-width: 980px) {
+
+    .teksti_par h1{
+        font-size: 25px;
+    }
+
+
+    .columnflex1 {
+        width: 20.33%;
+        padding: 30px;
+    }
+    
+    .columnflex1 img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .rowflex1 {
+        gap:3px; 
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 765px) {
+
+    .teksti_par h1{
+        font-size: 20px;
+    }
+
+    .columnflex1 {
+        width: 20.33%;
+        padding: 30px;
+    }
+    
+    .columnflex1 img{
+        width: 125px;
+        height: 125px;
+    }
+
+    .rowflex1{
+        gap:3px; 
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 0px;
+    }
+
+    .columnflex p{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 645px) {
+    .columnflex1 {
+        width: 20.33%;
+        padding: 30px;
+    }
+    
+    .columnflex1 img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .columnflex1 p{
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 525px) {
+
+    .teksti_par h1{
+        font-size: 15px;
+    }
+
+    .columnflex1 {
+        width: 20.33%;
+        padding: 20px;
+    }
+    
+    .columnflex1 img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .columnflex1 p{
+        font-size: 6px;
+    }
+}
+    
+@media (max-width: 415px) {
+    .columnflex1 {
+        width: 20.33%;
+        padding: 30px;
+    }
+    
+    .columnflex1 img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .columnflex1 p{
+        font-size: 4px;
+        width: 50px;
+    }
 }
 
 

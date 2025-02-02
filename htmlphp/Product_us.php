@@ -36,30 +36,32 @@ $result = $stmt->get_result();
         <button class="login_btn"><a href="loginform.html">Log In</a></button>
     </nav>
 
-    <div class="rowflex">
-        <?php
-        $count = 0;
-        if ($result->num_rows > 0) {
-            while ($product = $result->fetch_assoc()) {
-                // Hap një div të ri nëse është produkti i parë ose pas çdo grupi prej 4 produktesh
-                if ($count % 4 == 0 && $count != 0) {
-                    echo '</div><div class="rowflex">';
+    <div style="margin-top: 50px">
+        <div class="rowflex">
+            <?php
+            $count = 0;
+            if ($result->num_rows > 0) {
+                while ($product = $result->fetch_assoc()) {
+                    // Hap një div të ri nëse është produkti i parë ose pas çdo grupi prej 4 produktesh
+                    if ($count % 4 == 0 && $count != 0) {
+                        echo '</div><div class="rowflex">';
+                    }
+
+                    echo '<div class="columnflex">';
+                    echo '<img src="' . $product['image_path'] . '" alt="Product Image">';
+                    echo '<p>' . $product['name'] . '</p>';
+                    echo '<div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">';
+                    echo '<p>' . $product['type'] . '</p>';
+                    echo '</div>';
+                    echo '</div>';
+
+                    $count++;
                 }
-
-                echo '<div class="columnflex">';
-                echo '<img src="' . $product['image_path'] . '" alt="Product Image" style="width: 300px;">';
-                echo '<p>' . $product['name'] . '</p>';
-                echo '<div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">';
-                echo '<p>' . $product['type'] . '</p>';
-                echo '</div>';
-                echo '</div>';
-
-                $count++;
+            } else {
+                echo '<p>No products available.</p>';
             }
-        } else {
-            echo '<p>No products available.</p>';
-        }
-        ?>
-    </div> 
+            ?>
+        </div> 
+    </div>
 </body>
 </html>

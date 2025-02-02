@@ -50,7 +50,7 @@ $result = $stmt->get_result();
                 }
 
                 echo '<div class="columnflex1">';
-                echo '<img src="' . $product['image_path'] . '" alt="Product Image" style="width: 300px;">';
+                echo '<img src="' . $product['image_path'] . '" alt="Product Image">';
                 echo '<p>' . $product['name'] . '</p>';
                 echo '<div style="font-size: 20px; display: flex; justify-content: space-between; width: 100%;">';
                 echo '<p>' . $product['type'] . '</p>';
